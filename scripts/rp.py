@@ -1,6 +1,6 @@
 import os.path
 from importlib import reload
-import launch
+import neko
 from pprint import pprint
 import gradio as gr
 import numpy as np
@@ -1076,7 +1076,7 @@ def resetpcache(p):
 
 def loraverchekcer(self):
     try:
-        self.ui_version = int(launch.git_tag().replace("v","").replace(".",""))
+        self.ui_version = int(neko.git_tag().replace("v","").replace(".",""))
     except:
         self.ui_version = 100
         
